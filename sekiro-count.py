@@ -40,5 +40,7 @@ counter = charge_counter():
 label_counter = tk.Label(root, text=str(counter),)
 label_counter.pack(pady=20)
  
-button_increase =
+button_increase = tk.Button(root, text="Reset", command=reset_counter, font=("Helvetica",14))
+button_increase.pack(pady=10)
+
     
