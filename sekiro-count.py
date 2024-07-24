@@ -27,5 +27,10 @@ def increase_counter ():
 def reset_counter():
     global counter
     response = messagebox.askyesno("Reset the counter","Are you sure you want to reset the counter?")
-    
+    if response:
+        counter = 0
+        label_counter.config(text=str(counter))
+        save_counter(counter)
+root = tk.Tk()        
+
     
