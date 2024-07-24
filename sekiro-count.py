@@ -31,6 +31,14 @@ def reset_counter():
         counter = 0
         label_counter.config(text=str(counter))
         save_counter(counter)
-root = tk.Tk()        
 
+root = tk.Tk()     
+root.title("Death Counter - Sekiro") 
+
+counter = charge_counter():
+    
+label_counter = tk.Label(root, text=str(counter),)
+label_counter.pack(pady=20)
+ 
+button_increase =
     
