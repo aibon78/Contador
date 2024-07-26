@@ -47,3 +47,4 @@ button_reset.pack(pady=10)
 
 root.mainloop()
 
+#CSS
