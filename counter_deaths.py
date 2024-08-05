@@ -16,7 +16,7 @@ def load_counter():
 def save_counter():
     with open(FILENAME, "w") as file:
         file.write(str(counter))
-        
+
 def increase_counter():
     global counter
     counter += 1
@@ -32,19 +32,27 @@ def reset_counter():
         save_counter()
 
 root = tk.Tk()
-root.title("Death Counter - Sekiro") 
+root.title("Death Counter - Sekiro")
+
+# Configuração da janela principal
+root.configure(bg="#696969")
 
 counter = load_counter()
 
-label_counter = tk.Label(root, text=str(counter), font=("Helvetica", 24))
+# Estilização do label_counter
+label_counter = tk.Label(root, text=str(counter), font=("Helvetica", 24), bg="#696969", fg="#B22222")
 label_counter.pack(pady=20)
 
-button_increase = tk.Button(root, text="Increase", command=increase_counter, font=("Helvetica", 14))
+# Estilização do botão de aumento
+button_increase = tk.Button(root, text="Increase", command=increase_counter, font=("Helvetica", 14),
+                            bg="#007bff", fg="white", activebackground="#0056b3", activeforeground="white",
+                            bd=0, padx=20, pady=10)
 button_increase.pack(pady=10)
 
-button_reset = tk.Button(root, text="Reset", command=reset_counter, font=("Helvetica", 14))
+# Estilização do botão de reset
+button_reset = tk.Button(root, text="Reset", command=reset_counter, font=("Helvetica", 14),
+                         bg="#007bff", fg="white", activebackground="#0056b3", activeforeground="white",
+                         bd=0, padx=20, pady=10)
 button_reset.pack(pady=10)
 
 root.mainloop()
-
-#CSS
